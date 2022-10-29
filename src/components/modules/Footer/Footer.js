@@ -16,7 +16,7 @@ const Footer = () => {
     <Box>
       <Grid container>
         <Grid item xs={12} md={7}>
-          <Box width={'100%'} height={'100%'} sx={{background:'#4b508d'}}>
+          <Box width={'100%'} height={'100%'} minHeight={'200px'} sx={{background:'#4b508d'}}>
             <Grid container>
               <Grid item xs={3}>
                 <Box sx={{padding:'20%'}}>
@@ -62,8 +62,8 @@ const Footer = () => {
             </Grid>
           </Box>
         </Grid>
-        <Grid item xs={12} md={5}>
-          <Box width={'100%'} height={'100%'}
+        <Grid item xs={12} md={5} component={"a"} href={'https://api.whatsapp.com/send/?phone=573176424485'} target={'_blank'} sx={{textDecoration:'none'}}>
+          <Box width={'100%'} height={'100%'} minHeight={'200px'}
             sx={{
               background: theme.palette.secondary.main,
               backgroundImage: `url(${hablemos})`,
