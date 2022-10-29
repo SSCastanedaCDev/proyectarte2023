@@ -20,7 +20,7 @@ const Footer = () => {
             <Grid container>
               <Grid item xs={3}>
                 <Box sx={{padding:'20%'}}>
-                  <img src={icono}/>
+                  <img src={icono} alt='Clínica Proyectarte'/>
                 </Box>
               </Grid>
               <Grid item xs={9}>
@@ -29,7 +29,6 @@ const Footer = () => {
                     variant={'h3'}
                     fontWeight={'bold'}
                     sx={{color: 'white'}}
-                    fontWeight={'bold'}
                   >
                     Clínica Proyectarte
                   </Typography>
@@ -66,7 +65,7 @@ const Footer = () => {
         <Grid item xs={12} md={5}>
           <Box width={'100%'} height={'100%'}
             sx={{
-              background: '#f49e8b',
+              background: theme.palette.secondary.main,
               backgroundImage: `url(${hablemos})`,
               backgroundRepeat: 'no-repeat',
               backgroundSize: '100%',

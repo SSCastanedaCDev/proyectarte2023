@@ -2,11 +2,6 @@ import { useTheme } from "@mui/material";
 import {Box, Grid, Stack, Typography} from "@mui/material";
 import Footer from "components/modules/Footer";
 import Header from "components/modules/Header";
-import background2 from "assets/background2.png";
-import equipo from "assets/equipo.png";
-import divider from "assets/divider.svg";
-import borde1 from "assets/borde-superior.svg";
-import borde2 from "assets/borde-inferior.svg";
 import servicios1 from "assets/psicoterapia_new.png"
 import servicios2 from "assets/coach-nutricional_new.png"
 import servicios3 from "assets/tratamientos-especializados_new.png"
@@ -62,7 +57,7 @@ const Servicios = () => {
             <Grid container spacing={4}>
               <Grid item xs={12} md={4}>
                 <Box px={'5%'}>
-                  <img src={servicios1} style={{width:'100%'}} />
+                  <img src={servicios1} style={{width:'100%'}} alt='Clínica Proyectarte | Psicoterapia'/>
                   <br /><br />
                   <Titulo titulo='Psicoterapia'/>
                   <br />
@@ -73,7 +68,7 @@ const Servicios = () => {
               </Grid>
               <Grid item xs={12} md={4}>
                 <Box px={'5%'}>
-                  <img src={servicios2} style={{width:'100%'}} />
+                  <img src={servicios2} style={{width:'100%'}} alt='Clínica Proyectarte | Coach Nutricional'/>
                   <br /><br />
                   <Titulo titulo='Coach Nutricional'/>
                   <br />
@@ -84,7 +79,7 @@ const Servicios = () => {
               </Grid>
               <Grid item xs={12} md={4}>
                 <Box px={'5%'}>
-                  <img src={servicios3} style={{width:'100%'}} />
+                  <img src={servicios3} style={{width:'100%'}} alt='Clínica Proyectarte | Tratamientos Especializados'/>
                   <br /><br />
                   <Titulo titulo='Tratamientos Especializados'/>
                   <br />
@@ -104,7 +99,7 @@ const Servicios = () => {
             <br />
             <Grid container spacing={9}>
               <Grid item xs={12} md={4}>
-                <img src={servicios4} style={{width:'100%'}} />
+                <img src={servicios4} style={{width:'100%'}} alt='Clínica Proyectarte | Psicoterapia Individual'/>
                 <br /><br />
                 <Titulo titulo='Psicoterapia Individual'/>
                 <br />
@@ -117,7 +112,7 @@ const Servicios = () => {
                 </Typography>
               </Grid>
               <Grid item xs={12} md={4}>
-                <img src={servicios5} style={{width:'100%'}} />
+                <img src={servicios5} style={{width:'100%'}} alt='Clínica Proyectarte | Psicoterapia de Pareja'/>
                 <br /><br />
                 <Titulo titulo='Psicoterapia de Pareja'/>
                 <br />
@@ -132,7 +127,7 @@ const Servicios = () => {
                 </Typography>
               </Grid>
               <Grid item xs={12} md={4}>
-                <img src={servicios6} style={{width:'100%'}} />
+                <img src={servicios6} style={{width:'100%'}} alt='Clínica Proyectarte | Psicoterapia de Adolescentes y Familia'/>
                 <br /><br />
                 <Titulo titulo='Psicoterapia de Adolescentes y Familia'/>
                 <br />
@@ -146,7 +141,7 @@ const Servicios = () => {
                 </Typography>
               </Grid>
               <Grid item xs={12} md={4}>
-                <img src={servicios7} style={{width:'100%'}} />
+                <img src={servicios7} style={{width:'100%'}} alt='Clínica Proyectarte | Grupos de Apoyo'/>
                 <br /><br />
                 <Titulo titulo='Grupos de Apoyo'/>
                 <br />
@@ -158,7 +153,7 @@ const Servicios = () => {
                 </Typography>
               </Grid>
               <Grid item xs={12} md={4}>
-                <img src={servicios8} style={{width:'100%'}} />
+                <img src={servicios8} style={{width:'100%'}} alt='Clínica Proyectarte | Para verte mejor, comer mejor'/>
                 <br /><br />
                 <Titulo titulo='Para verte mejor, comer mejor'/>
                 <br />
@@ -174,7 +169,7 @@ const Servicios = () => {
               </Grid>
               <Grid item xs={12} md={4}>
                 <Box sx={{backgroundImage: `linear-gradient(${theme.palette.primary.main}, ${theme.palette.secondary.light})`}}>
-                <img src={servicios9} style={{width:'100%'}} />
+                <img src={servicios9} style={{width:'100%'}} alt='Clínica Proyectarte | Cuidadores'/>
                 <br /><br />
                 <Box sx={{margin: '0 10%'}}>
                   <Titulo titulo='También estamos para los cuidadores'/>
@@ -206,10 +201,10 @@ const Servicios = () => {
               >
                 <Stack alignItems='center' justifyContent='space-evenly' height='100%'>
                   <Stack direction='row' justifyContent='space-evenly' width='100%'>
-                    <img src={famisanar} style={{width:'180px'}}/>
-                    <img src={sanitas} style={{width:'180px'}}/>
+                    <img src={famisanar} style={{width:'180px'}} alt='Famisanar' />
+                    <img src={sanitas} style={{width:'180px'}} alt='Sanitas' />
                   </Stack>
-                  <img src={ecopetrol} style={{width:'180px'}}/>
+                  <img src={ecopetrol} style={{width:'180px'}} alt='Ecopetrol' />
                 </Stack>
               </Box>
             </Grid>

@@ -1,12 +1,10 @@
 import { useTheme } from "@mui/material";
-import {Box, Grid, Stack, Typography} from "@mui/material";
+import {Box, Grid, Typography} from "@mui/material";
 import Footer from "components/modules/Footer";
 import Header from "components/modules/Header";
 import background2 from "assets/nosotros_new.png";
 import equipo from "assets/equipo_new.png";
 import divider from "assets/divider.svg";
-import borde1 from "assets/borde-superior.svg";
-import borde2 from "assets/borde-inferior.svg";
 import proyectarte from "assets/proyectarte.svg";
 
 const Nosotros = () => {
@@ -19,7 +17,7 @@ const Nosotros = () => {
         <Header />
         <Box sx={{background:theme.palette.secondary.light, padding:'5%'}}>
           <Box>
-            <img src={background2} style={{width:'100%'}}/>
+            <img src={background2} style={{width:'100%'}} alt='Clínica Proyectarte | Cuenta con Nosotros'/>
           </Box>
           <br />
           <Box>
@@ -33,7 +31,7 @@ const Nosotros = () => {
           </Box>
           <br />
           <Box sx={{padding:'0 20%'}}>
-            <img src={divider} />
+            <img src={divider} alt='Clínica Proyectarte'/>
           </Box>
         </Box>
         <Box sx={{background:theme.palette.secondary.light}}>
@@ -73,6 +71,7 @@ const Nosotros = () => {
                   display: 'block',
                   marginLeft: 'auto'
                 }}
+                alt='Clínica Proyectarte | ¿Quiénes Somos?'
               />
               <br /><br />
               </Box>

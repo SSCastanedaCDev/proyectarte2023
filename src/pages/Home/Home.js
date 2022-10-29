@@ -1,11 +1,9 @@
 import { useTheme } from "@mui/material";
-import {Box, Grid, Typography} from "@mui/material";
+import {Box, Typography} from "@mui/material";
 import Footer from "components/modules/Footer";
 import Header from "components/modules/Header";
 import background1 from "assets/bg-text.png";
 import divider from "assets/divider.svg";
-import borde1 from "assets/borde-superior.svg";
-import borde2 from "assets/borde-inferior.svg";
 
 const Home = () => {
 
@@ -17,7 +15,7 @@ const Home = () => {
         <Header />
         <Box sx={{background:theme.palette.secondary.light, padding:'5%'}}>
           <Box>
-            <img src={background1} style={{width:'100%'}}/>
+            <img src={background1} style={{width:'100%'}} alt='Clínica Proyectarte | Lo podemos resolver juntos'/>
           </Box>
           <br />
           <Box>
@@ -29,7 +27,7 @@ const Home = () => {
           </Box>
           <br />
           <Box sx={{padding:'0 20%'}}>
-            <img src={divider} />
+            <img src={divider} alt='Clínica Proyectarte'/>
           </Box>
         </Box>
         <Footer />

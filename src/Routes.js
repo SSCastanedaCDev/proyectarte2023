@@ -2,7 +2,6 @@ import React from "react"
 import {
     Routes as ReactRoutes,
     Route,
-    Navigate
 } from 'react-router-dom'
 import {
   Home as HomePage,
