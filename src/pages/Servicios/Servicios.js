@@ -1,5 +1,6 @@
 import { useTheme } from "@mui/material";
 import {Box, Grid, Stack, Typography} from "@mui/material";
+import Grid2 from '@mui/material/Unstable_Grid2'; // Grid version 2
 import Footer from "components/modules/Footer";
 import Header from "components/modules/Header";
 import servicios1 from "assets/psicoterapia_new.png"
@@ -189,26 +190,8 @@ const Servicios = () => {
           <br /><br />
         </Box>
         <Box>
-          <Grid container>
-            <Grid item xs={12} md={7}>
-              <Box
-                sx={{
-                  width: '100%',
-                  height: '100%',
-                  backgroundImage:`url(${fondoAzul})`,
-                  backgroundSize:'100%'
-                }}
-              >
-                <Stack alignItems='center' justifyContent='space-evenly' height='100%'>
-                  <Stack direction='row' justifyContent='space-evenly' width='100%'>
-                    <img src={famisanar} style={{width:'180px'}} alt='Famisanar' />
-                    <img src={sanitas} style={{width:'180px'}} alt='Sanitas' />
-                  </Stack>
-                  <img src={ecopetrol} style={{width:'180px'}} alt='Ecopetrol' />
-                </Stack>
-              </Box>
-            </Grid>
-            <Grid item xs={12} md={5}>
+          <Grid2 container alignItems={'stretch'}>
+            <Grid2 item xs={12} md={5} mdOffset={7}>
               <Box
                 sx={{
                   padding:'0 5%',
@@ -239,8 +222,27 @@ const Servicios = () => {
                   <Box sx={{height:'20vh'}}></Box>
                 </Box>
               </Box>
-            </Grid>
-          </Grid>
+            </Grid2>
+            <Grid2 item xs={12} md={7} mdOffset={-12}>
+              <Box
+                sx={{
+                  width: '100%',
+                  height: '100%',
+                  minHeight: '300px',
+                  backgroundImage:`url(${fondoAzul})`,
+                  backgroundSize:'100%'
+                }}
+              >
+                <Stack alignItems='center' justifyContent='space-evenly' height='100%'>
+                  <Stack direction='row' justifyContent='space-evenly' width='100%'>
+                    <img src={famisanar} style={{width:'180px'}} alt='Famisanar' />
+                    <img src={sanitas} style={{width:'180px'}} alt='Sanitas' />
+                  </Stack>
+                  <img src={ecopetrol} style={{width:'180px'}} alt='Ecopetrol' />
+                </Stack>
+              </Box>
+            </Grid2>
+          </Grid2>
         </Box>
         <Footer />
       </Box>
