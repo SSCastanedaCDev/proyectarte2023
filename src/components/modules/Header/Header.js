@@ -16,23 +16,33 @@ import logotipo from "assets/logotipo.svg"
 const pages = [
   {
     nombre: 'Inicio',
-    link: '/'
+    link: '/',
+    disabled: false,
+    target: '_self'
   },
   {
     nombre: 'Nosotros',
-    link: '/nosotros'
+    link: '/nosotros',
+    disabled: false,
+    target: '_self'
   },
   {
     nombre: 'Servicios',
-    link: '/servicios'
+    link: '/servicios',
+    disabled: false,
+    target: '_self'
   },
   {
     nombre: 'Blog',
-    link: '/blog'
+    link: '/blog',
+    disabled: true,
+    target: '_self'
   },
   {
     nombre: 'Encuentra Ayuda',
-    link: '/ayuda'
+    link: 'https://api.whatsapp.com/send/?phone=573176424485',
+    disabled: false,
+    target: '_blank'
   },
 ];
 
@@ -51,7 +61,7 @@ const Header = () => {
   return (
     <AppBar position="static" sx={{background:theme.palette.secondary.light}}>
       <Container maxWidth="xl">
-        <Toolbar disableGutters sx={{paddingTop:'10vh'}}>
+        <Toolbar disableGutters sx={{paddingTop:'3vh'}}>
           <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}>
             <img src={logotipo} style={{height:'12vh'}} alt='Clínica Proyectarte' />
           </Box>
@@ -85,7 +95,13 @@ const Header = () => {
               }}
             >
               {pages.map((page, key) => (
-                <MenuItem key={key} onClick={handleCloseNavMenu}>
+                <MenuItem
+                  key={key}
+                  component={"a"}
+                  href={page.link}
+                  disabled={page.disabled}
+                  target={page.target}
+                >
                   <Typography textAlign="center">{page.nombre}</Typography>
                 </MenuItem>
               ))}
@@ -102,6 +118,8 @@ const Header = () => {
                 sx={{ my: 2, mx:2, display: 'block' }}
                 variant={window.location.pathname === page.link ? 'contained' : 'outlined'}
                 href={page.link}
+                disabled={page.disabled}
+                target={page.target}
               >
                 {page.nombre} 
               </Button>
